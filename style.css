@@ -1,0 +1,329 @@
+/* GLOBAL RESET – FULL HEART */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #ffe4ec 0%, #ffd0dd 50%, #ffb6c9 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem 1.2rem;
+    position: relative;
+    transition: background 0.5s ease;
+}
+
+/* floating silk hearts */
+.floating-hearts-silk {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.silk-heart {
+    position: absolute;
+    color: rgba(255, 120, 160, 0.2);
+    font-size: 2.8rem;
+    animation: floatSilk 22s infinite ease-in-out;
+    bottom: -15%;
+    filter: drop-shadow(0 0 8px rgba(255, 200, 220, 0.6));
+}
+
+@keyframes floatSilk {
+    0% { transform: translateY(0) rotate(0deg) scale(0.8); opacity: 0.3; }
+    50% { transform: translateY(-60vh) rotate(20deg) scale(1.2); opacity: 0.5; }
+    100% { transform: translateY(-120vh) rotate(40deg) scale(0.8); opacity: 0.1; }
+}
+
+/* main love nest */
+.love-nest {
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(255, 250, 250, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 64px 64px 64px 64px;
+    box-shadow: 0 30px 50px rgba(190, 50, 90, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.7), inset 0 0 30px rgba(255, 200, 220, 0.5);
+    padding: 2.8rem 2.4rem;
+    position: relative;
+    z-index: 30;
+    border: 2px solid rgba(255, 245, 250, 0.9);
+}
+
+/* heart atrium */
+.heart-atrium {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.heart-locket {
+    background: radial-gradient(circle at 30% 30%, #ff6b8b, #ff3b5c);
+    width: 100px;
+    height: 100px;
+    border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+    transform: rotate(35deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 30px #ff8da1, 0 0 0 8px rgba(255, 240, 245, 0.7);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.heart-locket i {
+    transform: rotate(-35deg);
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 0 5px 12px #b3003a;
+}
+
+.heart-locket:hover {
+    transform: rotate(35deg) scale(1.12);
+    box-shadow: 0 25px 45px #ff6680, 0 0 0 12px rgba(255, 220, 240, 0.9);
+}
+
+.heart-flower {
+    background: #ffd9e2;
+    width: 100px;
+    height: 100px;
+    border-radius: 70% 30% 70% 30% / 60% 50% 50% 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid white;
+    box-shadow: inset 0 0 25px rgba(255, 100, 150, 0.5), 0 18px 28px #ff9eb5;
+}
+
+.heart-flower i {
+    font-size: 3.8rem;
+    color: #d6254e;
+    filter: drop-shadow(0 8px 8px #ffb6c1);
+}
+
+/* message section */
+.message-throne {
+    text-align: center;
+    color: #5e1a36;
+    margin: 25px 0 20px;
+}
+
+.message-throne h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #a12246;
+    text-shadow: 0 6px 16px #ffd0dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.time-crystal {
+    background: rgba(255, 225, 235, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 16px 32px;
+    border-radius: 120px;
+    font-size: 1.9rem;
+    font-weight: 650;
+    color: #9e1e44;
+    border: 3px solid white;
+    box-shadow: 0 10px 0 rgba(180, 40, 70, 0.2);
+    margin: 20px 0 10px;
+    display: inline-block;
+}
+
+.love-epistle {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    background: rgba(255, 235, 240, 0.7);
+    border-radius: 50px 50px 50px 50px;
+    padding: 30px 28px;
+    color: #4d132a;
+    font-weight: 500;
+    backdrop-filter: blur(6px);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    margin: 30px 0 20px;
+    box-shadow: 0 12px 30px rgba(255, 130, 160, 0.3);
+}
+
+/* support buttons */
+.support-shrine {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0 25px;
+}
+
+.support-gem {
+    background: linear-gradient(145deg, #ffe3ed, #ffd5e0);
+    padding: 18px 30px;
+    border-radius: 90px;
+    border: 3px solid white;
+    font-size: 1.45rem;
+    font-weight: 650;
+    color: #8f1e40;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    backdrop-filter: blur(4px);
+    transition: 0.25s;
+    cursor: pointer;
+    box-shadow: 0 10px 15px rgba(255, 80, 120, 0.2);
+    border: 2px solid #ffb6c9;
+}
+
+.support-gem i {
+    font-size: 2.1rem;
+    color: #e63e5e;
+    transition: 0.2s;
+}
+
+.support-gem:hover {
+    background: #ffeef2;
+    border: 2px solid #ff4f7a;
+    transform: translateY(-7px);
+    box-shadow: 0 20px 30px rgba(255, 70, 120, 0.4);
+}
+
+/* game section */
+.game-pavilion {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 4px dotted rgba(255, 110, 140, 0.6);
+}
+
+.game-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-size: 2rem;
+    color: #ac2350;
+    margin-bottom: 20px;
+}
+
+.heart-match-game {
+    background: rgba(255, 220, 230, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 60px;
+    padding: 30px 25px;
+    border: 3px solid white;
+    box-shadow: inset 0 0 30px rgba(255, 200, 215, 0.7);
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.heart-card {
+    background: radial-gradient(circle at 20% 30%, #ffa0b4, #ff7a98);
+    aspect-ratio: 1 / 1;
+    border-radius: 30% 70% 50% 50% / 50% 40% 60% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 15px 20px rgba(200, 60, 100, 0.3);
+    transform: scale(1);
+    transition: 0.2s ease;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    text-shadow: 0 5px 10px #88002a;
+}
+
+.heart-card.flipped {
+    background: radial-gradient(circle at 30% 30%, #ffd0dc, #ffe5ec);
+    color: #e63e5e;
+    border: 4px solid white;
+    box-shadow: 0 0 0 6px rgba(255, 220, 240, 0.8);
+}
+
+.heart-card.matched {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.3s;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.6rem;
+    color: #701f3a;
+    font-weight: 600;
+    margin: 20px 0 15px;
+}
+
+.reset-game-btn {
+    background: white;
+    border: none;
+    padding: 16px 35px;
+    border-radius: 70px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #b22b4e;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    border: 3px solid #ff8da1;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 8px 0 #b34b62;
+}
+
+.reset-game-btn:hover {
+    background: #ffe2ec;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 0 #b34b62;
+}
+
+.message-attach {
+    font-size: 1.35rem;
+    color: #9e264a;
+    background: rgba(255, 245, 250, 0.7);
+    padding: 18px;
+    border-radius: 70px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    border: 2px dashed #ff6f91;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+    .love-nest { padding: 2rem 1.5rem; }
+    .message-throne h1 { font-size: 2.2rem; }
+    .game-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .heart-card { font-size: 2.2rem; }
+}
+
+@media (max-width: 500px) {
+    .game-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .heart-card { font-size: 1.8rem; }
+}
