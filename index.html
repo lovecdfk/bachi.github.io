@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>two years — our heart garden</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- floating silk hearts container -->
+    <div class="floating-hearts-silk" id="silkHeartContainer"></div>
+
+    <!-- MAIN LOVE NEST -->
+    <div class="love-nest">
+        <!-- heart atrium: beautiful heart shaped images -->
+        <div class="heart-atrium">
+            <div class="heart-locket">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="heart-flower">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="heart-locket" style="background: radial-gradient(circle at 30% 30%, #ff86a0, #ff4d6a);">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+
+        <!-- two years message -->
+        <div class="message-throne">
+            <h1>
+                <i class="fas fa-heart-circle"></i> two years <i class="fas fa-heart-circle"></i>
+            </h1>
+            <span class="time-crystal">
+                <i class="fas fa-calendar-heart"></i> haven't met yet <i class="fas fa-calendar-heart"></i>
+            </span>
+        </div>
+
+        <!-- main love letter -->
+        <div class="love-epistle">
+            <i class="fas fa-heart" style="color:#ff4f7a; font-size:2rem;"></i> 
+            Two years. 730 nights of dreaming the same dream — your face, your warmth. 
+            I have crossed oceans of hours just to feel you close. Distance taught me 
+            that love is not touch; it's presence. And you are everywhere in me. 
+            Until we meet, my soul sends yours a thousand kisses through the air.
+            <i class="fas fa-heart" style="color:#ff4f7a; font-size:2rem;"></i>
+        </div>
+
+        <!-- SUPPORT BUTTONS - each click opens a new html page with poem -->
+        <div class="support-shrine">
+            <div class="support-gem" id="btnImHere">
+                <i class="fas fa-hand-holding-heart"></i> I'm here
+            </div>
+            <div class="support-gem" id="btnYoursOnly">
+                <i class="fas fa-heart"></i> Yours only
+            </div>
+            <div class="support-gem" id="btnAlways">
+                <i class="fas fa-heart-circle-check"></i> Always
+            </div>
+        </div>
+
+        <!-- heartbeat counter -->
+        <div style="display: flex; justify-content: center; margin: 15px 0 5px;">
+            <span style="background: rgba(255,200,220,0.8); padding: 15px 30px; border-radius: 70px; font-size: 1.7rem; font-weight: 600; color: #751f3a;">
+                <i class="fas fa-heartbeat"></i> <span id="daysCounter">731</span> days, <span id="hoursCounter">0</span> hours <i class="fas fa-heartbeat"></i>
+            </span>
+        </div>
+
+        <!-- GAME: HEART MATCHING -->
+        <div class="game-pavilion">
+            <div class="game-header">
+                <i class="fas fa-heart"></i> play with me, love <i class="fas fa-heart"></i>
+            </div>
+            <div class="heart-match-game">
+                <!-- memory match grid -->
+                <div class="game-grid" id="heartMatchGrid"></div>
+                
+                <div class="game-stats">
+                    <span><i class="fas fa-star"></i> matches: <span id="matchCount">0</span>/6</span>
+                    <span><i class="fas fa-clock"></i> time with you: <span id="gameTimer">0</span>s</span>
+                </div>
+
+                <div style="display: flex; justify-content: center;">
+                    <button class="reset-game-btn" id="resetGameBtn">
+                        <i class="fas fa-heart-circle"></i> shuffle hearts <i class="fas fa-heart-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- attach message -->
+        <div class="message-attach">
+            <i class="fas fa-heart-circle"></i> attached to you — let's stay here forever <i class="fas fa-heart-circle"></i>
+        </div>
+        <div style="text-align: center; margin-top: 20px; color: #a13453; font-size: 1.25rem;">
+            <i class="fas fa-heart"></i> every heartbeat carries your name <i class="fas fa-heart"></i>
+        </div>
+    </div>
+
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
